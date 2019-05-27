@@ -8,10 +8,8 @@ $$
 
 ##### 矩阵
 
-​		
-$$
-\begin{bmatrix} a1&a2&a3\\ b1&b2&b3 \\c1&c2&c3 \end{bmatrix}
-$$
+	
+$$\begin{bmatrix} a1&a2&a3\\ b1&b2&b3 \\c1&c2&c3 \end{bmatrix}$$
 
 ##### 求和
 
