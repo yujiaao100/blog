@@ -1,8 +1,10 @@
 # latex中数学公式的表示样例
 
 ##### github展示插件
+	[mathjax插件](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github)
 
-		[mathjax插件](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github)
+目前已知注意事项：矩阵写的时候要用\\\\\\四个\表示换行而不是标准的两个（\应该是转移符的问题）
+
 ##### 积分
 
 $$
@@ -11,7 +13,7 @@ $$
 
 ##### 矩阵
 
-	
+
 $$
 \begin{bmatrix} 
 a1&a2&a3\\\\
