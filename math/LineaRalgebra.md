@@ -106,8 +106,19 @@ $$
 $$
 \begin{matrix}a1&0&0\\0&a2&0\\0&0&a3 \end{matrix} 表示第一行乘a1 第二行乘 a2 第三行 乘a3
 $$
-​			
+​			将矩阵A 变行向量 B分解列向量 矩阵乘积可表示如下图所示 可以将向量看做一个整体当做数运算 
 
+​			
+$$
+\begin{bmatrix}A1^T&A2^T&A3^T
+\end{bmatrix} 	\quad    * 
+\begin{bmatrix}
+B1\\\\B2\\\\B3
+\end{bmatrix} \quad = 
+\begin{matrix}
+(A1^T*B1)+(A2^T*B2)+(A3^T*B3)
+\end{matrix}
+$$
 ​	向量：
 
 ​		矩阵*列向量=矩阵的列向量的特殊线性组合
