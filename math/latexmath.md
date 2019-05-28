@@ -1,5 +1,8 @@
 # latex中数学公式的表示样例
 
+##### github展示插件
+
+		[mathjax插件](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github)
 ##### 积分
 
 $$
