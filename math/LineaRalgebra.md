@@ -31,8 +31,8 @@
 ​			
 $$
 \begin{matrix}
-	a11& a12& a13\\
-	a21&a22&a23\\
+	a11& a12& a13\\\\
+	a21&a22&a23\\\\
 	a31&a32&a33
 \end{matrix}
 $$
@@ -142,14 +142,33 @@ $$
 
 ​			
 $$
-\begin{matrix}1&0&0\\x1&1&0\\x2&x3&1\end{matrix}    \quad\quad\quad\quad     \begin{matrix}y1&y2&y3\\0&y4&y5\\0&0&y6\end{matrix}
+\begin{matrix}
+1&0&0\\\\
+x1&1&0\\\\
+x2&x3&1
+\end{matrix}    \quad\quad\quad\quad     
+\begin{matrix}
+y1&y2&y3\\\\
+0&y4&y5\\\\
+0&0&y6
+\end{matrix}
 $$
 ​			或者 将U分解为一个对角行列式和一个对角线为1的行列式 A=LDR
 
 ​			
 $$
-\begin{matrix}1&0&0\\x1&1&0\\x2&x3&1\end{matrix}    \quad\quad\quad\quad     \begin{matrix}d1&0&0\\0&d2&0\\0&0&d3\end{matrix} \quad\quad\quad\quad 
-\begin{matrix}1&y2&y3\\0&1&y5\\0&0&1\end{matrix}
+\begin{matrix}
+1&0&0\\\\
+x1&1&0\\\\
+x2&x3&1
+\end{matrix}    \quad\quad\quad\quad     
+\begin{matrix}d1&0&0\\\\
+0&d2&0\\\\
+0&0&d3\end{matrix} \quad\quad\quad\quad 
+\begin{matrix}
+1&y2&y3\\\\
+0&1&y5\\\\
+0&0&1\end{matrix}
 $$
 ​		这里的d1 d2 d3 是u的原来的对角线系数  而相当于将原来的u第一行除d1 第二行除d2 第三行 除d3（其实就是D *新U =原来的U ）
 
