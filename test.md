@@ -12,3 +12,10 @@ B1\\\\B2\\\\B3
 $$
 
 $\int_a$
+
+
+$$
+{
+\begin{bmatrix}a\\\\b\\\\c\end{bmatrix} * \begin{bmatrix}a&b&c\end{bmatrix}
+}
+$$
