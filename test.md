@@ -1,7 +1,7 @@
 
 $\begin{bmatrix}
 A1^T&A2^T&A3^T
-\end{bmatrix}$
+\end{bmatrix}
 \quad    * 
 \begin{bmatrix}
 B1\\\\B2\\\\B3
