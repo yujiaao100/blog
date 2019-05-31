@@ -1,5 +1,5 @@
 $$
-{}\begin{bmatrix}
+{\begin{bmatrix}
 A1^T&A2^T&A3^T
 \end{bmatrix}
 \quad    * 
