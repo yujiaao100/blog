@@ -12,6 +12,7 @@ $$
 \begin{bmatrix}
 1\\\\2\\\\3
 \end{bmatrix}
+\quad
 \begin{bmatrix}
 2\\\\3\\\\4\\\\
 \end{bmatrix}
