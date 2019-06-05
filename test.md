@@ -14,5 +14,5 @@ $$
 \end{bmatrix}
 \begin{bmatrix}
 2\\\\3\\\\4\\\\
-\end{matrix}
+\end{bmatrix}
 $$
