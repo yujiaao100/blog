@@ -5,8 +5,7 @@ $$
 B1\\\\B2\\\\B3
 \end{bmatrix} 
 \quad 
-=(A1^T*B1)
-+(A2^T*b2)
+=(A1^T*B1)+(A2
 $$
 
 
