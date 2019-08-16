@@ -14,6 +14,10 @@
 
 ##### 抽样分布：
 
+##### 假设检验和参数估计：
+
+​	
+
 
 
 ##### 难以理解的地方：
@@ -44,5 +48,49 @@ $\quad f_Z(z)=\int^{+oo}_{-oo}f_X(x)f_Y(z-x)dx$
 
 
 
-​	
+##### 关于样本自由度 n-1 $\chi^2$分布 t分布的n-1
+
++ 方差：
+
+$\quad S^2=\frac{1}{n-1}\Sigma_{i=1}^{n}(X-\overline x)^2$
+
+$\quad\quad E\Sigma_{i=1}^{n}(X-\overline x)=E\Sigma(X-u+u-\overline x)^2$
+
+$\quad\quad=E\Sigma\{(X-u)^2+(u-\overline x)^2+2(X-u)(u-\overline x)\}$
+
+因为$\Sigma X=\Sigma\overline x=n\overline x$  
+
+所以复杂部分$\Sigma(X-u)(u-\overline x)=\Sigma(Xu-X\overline x-u^2+u\overline x)=\Sigma \overline xu-\Sigma \overline x^2-\Sigma u^2+\Sigma u\overline x=-\Sigma (\overline x-u)^2$
+
+带入得到$E\Sigma_{i=1}^{n}(X-\overline x)^2=E\{\Sigma(X-u)^2-\Sigma(u-\overline x)^2\}$
+
+而$X\sim N(u,\sigma^2)\quad \overline x\sim (u,\frac{\sigma^2}{n})$
+
+$\quad\quad \Sigma Dx=\Sigma E(X-u)^2=n\sigma^2 \quad \Sigma D\overline x=\Sigma(\overline x-u)^2=\sigma^2$
+
+即$E\Sigma_{i=1}^{n}(X-\overline x)=(n-1)\sigma^2$
+
+所以这里的$S^2$  的系数为n-1	
+
++ $\chi^2分布$
+
+  $\frac{(n-1)S^2}{\sigma^2}=\frac{\Sigma(X-\overline x)^2}{\sigma^2}=\frac{\Sigma(X-u+u-\overline x)^2}{\sigma^2}$
+
+  同方差的证明方法一样：
+
+  原式=$\frac{\Sigma(X-u)^2}{\sigma^2}-\frac{\Sigma(\overline x-u)^2}{\sigma^2}$
+
+  $\overline x \sim N(u,\frac{\sigma^2}{n})$
+
+  $\frac{\sqrt n \Sigma(\overline x-u)^2}{\sigma^2} \sim \chi^2(n)$
+
+  n=1时
+
+  $\frac{\Sigma(\overline x-u)^2}{\sigma^2} \sim \chi^2(1)$
+
+  原式=$\chi^2(n)-\chi^2(1)=\chi^2(n-1)$
+
+  
+
+  ​	
 
