@@ -37,11 +37,11 @@ $$
 | $\Phi$ |      |      |      |      |
 | $\alpha$ | $\beta$ | $\gamma$ | $\delta$ | $\epsilon$ |
 | $\varepsilon$ | $\zeta$ | $\eta$ |      |      |
-|      |      |      |      |      |
+|  |      |      |      |      |
 |      |      |      |      |      |
 |      |      |      |      |      |
 | | | | | |
-| | | | | |
+| | $\underline x$ | $\overline x$ | $\sim$ | $\iint$ |
 
 犯懒了 回头补上
 

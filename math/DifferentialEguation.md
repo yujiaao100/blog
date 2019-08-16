@@ -104,7 +104,13 @@ $\begin{bmatrix}\frac{dv_1}{dx}\\\\\frac{dv_2}{dx}\end{bmatrix}=\begin{bmatrix}a
 
 更加有意思的情况(目前查到的情况都是方阵 不知道这个东西是不是一定是方阵)
 
-定义 $e^{At}=\begin{bmatrix}e^{a_{11}t}&e^{a_{12}t}&\cdots \quad e^{a_{1n}t}\\\\e^{a_{21}t}&\ddots \\\\\vdots\\\\e^{a_{n1}t} &\cdots&& e^{a_{nn}t}\end{bmatrix}$
+矩阵指数$\quad\quad e^X=\sum_{k=0}^{oo}\frac{1}{k!}X^k$
+
+当$X=\Lambda x$时候 $e^{\Lambda x}=\sum_{k=0}^{oo}\frac{(\Lambda x) ^k}{k!}$ 
+
+每个对角线上的元素就是$\frac{(\lambda_ix)^k}{k!}$ 取极限就是 $e^{\lambda_i x}$其他元素都是0
+
+所以$e^{\Lambda x}=\begin{bmatrix}e^{\lambda_1x}&0&\cdots&\vdots\\\\0&e^{\lambda_2x}&\cdots&\vdots\\\\0&0&\ddots&\vdots\\\\0&&&e^{\lambda_n x}\end{bmatrix}$
 
 
 

@@ -90,6 +90,14 @@ $\quad\quad \Sigma Dx=\Sigma E(X-u)^2=n\sigma^2 \quad \Sigma D\overline x=\Sigma
 
   原式=$\chi^2(n)-\chi^2(1)=\chi^2(n-1)$
 
++ t分布(有了前面的基础非常容易理解)
+
+  $\overline x \sim N(u,\frac{\sigma^2}{n}) \quad  \frac{\sqrt n(\overline x-u)}{\sigma} \sim N(0,1)$
+
+  $\frac{(n-1)S^2}{\sigma^2}=\chi^2(n-1)\quad  \frac{\chi^2(n-1)}{n-1}=\frac{S^2}{\sigma^2}$
+
+  $\frac{(\overline x -u)}{S/\sqrt n}=\frac{\sqrt n(\overline x -u)}{\sqrt {\frac{S^2}{\sigma^2}}} \sim \frac{N(0,1)}{\sqrt \frac{\chi^2(n-1)}{n-1} }=t(n-1)$
+
   
 
   ​	
