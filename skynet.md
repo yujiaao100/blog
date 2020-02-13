@@ -120,11 +120,36 @@
 
    ​	小坑：socket.start(id,func)后 需要在函数内部和转发后的服务再次socket.start(id)才能使用服务这时候start不传递函数就是允许服务接受对应id的消息 只要连接后获得了id 就可以在任何其他服务中使用：参考testsocket.lua
 
-   
+   #### 关于message消息：
 
-   ​	
+   ​	skynet的本质是一个lightuserdata 也就是c指针（lightuserdata连gc都没有） 代码里面一般用msg，sz即指针和数据长度 
 
+   ​	相关函数：
 
+   ​	1.function pack()（返回msg,sz的消息指针+长度）（）
+
+   ​	2.function unpack(msg,sz){--将c指针msg和长度转换为 dispatch 的 。。。参数}
+
+   ​	3.function dispatch（session，source，cmd，...）回调函数前两个参数是固定的  后面的参数由unpack 执行后函数提供
+
+   ```lua
+   skynet.register_protocol {
+     name = "text",
+     id = skynet.PTYPE_TEXT,
+     pack = function(m) return tostring(m) end,--return msg,sz
+     unpack = skynet.tostring,--function(msg,size)
+     --dispatch=function(id,session,...)
+   }
+   ```
+
+```lua
+local CMD = {}
+
+skynet.dispatch("lua", function(session, source, cmd, ...)
+  local f = assert(CMD[cmd])
+  f(...)
+end)
+```
 
 
    https://github.com/cloudwu/skynet/wiki
