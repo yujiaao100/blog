@@ -60,11 +60,35 @@
 
    ##### 级别分析:
 
-   c服务->snlua服务(c语言代码实现加载lua虚拟机功能)->snaxd服务(lua服务  加载lua snax模块函数 执行init函数)->snax
+   ​	c服务->snlua服务(c语言代码实现加载lua虚拟机功能)->snaxd服务(lua服务  加载lua snax模块函数 执行init函数)->snax
 
    snax.newservice("名称"，“初始化参数”)  执行init初始化可以通过发消息 变长参数的方式发送参数到init函数执行
 
-   
+   底层（skynet-src）定义的重要信息
+
+   最底层的服务：
+   	#define THREAD_WORKER 0
+   	#define THREAD_MAIN 1
+   	#define THREAD_SOCKET 2
+   	#define THREAD_TIMER 3
+   	#define THREAD_MONITOR 4
+
+   消息类型：这里的类型有些用到了 有些没用到 也可以注册其他的但是默认提供了一些有固定的容易理解的语义而且某些系统库会发送某些消息
+
+   	#define PTYPE_TEXT 0
+   	#define PTYPE_RESPONSE 1
+   	#define PTYPE_MULTICAST 2
+   	#define PTYPE_CLIENT 3
+   	#define PTYPE_SYSTEM 4
+   	#define PTYPE_HARBOR 5
+   	#define PTYPE_SOCKET 6
+   	// read lualib/skynet.lua examples/simplemonitor.lua
+   	#define PTYPE_ERROR 7
+   	// read lualib/skynet.lua lualib/mqueue.lua lualib/snax.lua
+   	#define PTYPE_RESERVED_QUEUE 8
+   	#define PTYPE_RESERVED_DEBUG 9
+   	#define PTYPE_RESERVED_LUA 10
+   	#define PTYPE_RESERVED_SNAX 11
 
     #### 	 其他各种服务：
 
@@ -76,7 +100,7 @@
 
    ​			watchdog是agent和gateserver的管理服务 负责gateserver的启动 agent的增加和踢下线等工作	watchdog是学生和老师的管理员 可以负责学生agent入学 被开除等
 
-   snax:
+   #### snax:
 
    ​	 response  需要返回函数（rpc调用）
 
@@ -84,7 +108,21 @@
 
    ​        init() 启动
 
-   ​        exit（）退出      
+   ​        exit（）退出  
+
+   #### 关于socket：
+
+   ​	skynet提供了一个socketdriver 这个是最底层的socket服务器（lua-socket(capi)->skynet-src）
+
+   ​	socketdriver.start()之后会将发送socket消息到服务进行处理 然后服务绑定注册socket消息的处理方式（参考默认gateserver）
+
+   ​	因为socketdriver处理起来比较麻烦因此提供默认方式socket socket底层是调用socketdriver 也会绑定默认socket消息处理方式
+
+   ​	小坑：socket.start(id,func)后 需要在函数内部和转发后的服务再次socket.start(id)才能使用服务这时候start不传递函数就是允许服务接受对应id的消息 只要连接后获得了id 就可以在任何其他服务中使用：参考testsocket.lua
+
+   
+
+   ​	
 
 
 
