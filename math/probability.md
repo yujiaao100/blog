@@ -90,7 +90,7 @@ $\quad\quad \Sigma Dx=\Sigma E(X-u)^2=n\sigma^2 \quad \Sigma D\overline x=\Sigma
 
   原式=$\chi^2(n)-\chi^2(1)=\chi^2(n-1)$
 
-+ t分布(有了前面的基础非常容易理解)
++ t分布(有了前面的基础非常容易理解) （有问题）
 
   $\overline x \sim N(u,\frac{\sigma^2}{n}) \quad  \frac{\sqrt n(\overline x-u)}{\sigma} \sim N(0,1)$
 
